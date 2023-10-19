@@ -67,7 +67,7 @@ const Create = () => {
         <button type="submit"
             className="w-28 h-11 pt-2.5 border flex justify-center content-center  
             border-solid shadow bg-teal-900 text-white
-            border-white rounded">Spara</button>
+            border-white rounded-3xl">Spara</button>
       </form>
     </div>
   );
