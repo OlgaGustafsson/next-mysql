@@ -18,21 +18,26 @@ interface Post {
 //   router.push(`/singlepage/${id}`);
 // };
 
-const handleEdit = (id: number) => {
-  // redigering
-  console.log(`Redigera post med ID: ${id}`);
-};
+// const handleEdit = (id: number) => {
+//   // redigering
+//   console.log(`Redigera post med ID: ${id}`);
+// };
 
-const handleDelete = (id: number) => {
-  // borttagning
-  console.log(`Ta bort post med ID: ${id}`);
-};
+// const handleDelete = (id: number) => {
+//   // borttagning
+//   console.log(`Ta bort post med ID: ${id}`);
+// };
 
 
 export default function Home() {
 
 
   const [posts, setPosts] = useState<Post[]>([]);
+
+  const [showModal, setShowModal] = useState(false);
+  const [selectedPost, setSelectedPost] = useState<Post | null>(null);
+  const [editedTitle, setEditedTitle] = useState('');
+  const [editedContent, setEditedContent] = useState('');
 
   const getPosts = async () => {
     try {
@@ -47,6 +52,53 @@ export default function Home() {
   useEffect(() => {
     getPosts();
   }, []);
+
+  // update post
+
+  const handleEdit = (id: number) => {
+    const postToEdit = posts.find(post => post.id === id);
+    console.log(postToEdit);
+    if (postToEdit) {
+      setSelectedPost(postToEdit);
+      setEditedTitle(postToEdit.title);
+      setEditedContent(postToEdit.content);
+      setShowModal(true);
+    }
+  };
+
+  // const handleCloseModal = () => {
+  //   setShowModal(false);
+  //   setEditedTitle('');
+  //   setEditedContent('');
+  // };
+
+
+  const updatePost = async () => {
+    console.log("selectedPost", selectedPost);
+    try {
+      const response = await fetch(`http://localhost:3000/posts/${selectedPost.id}`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ title: editedTitle, content: editedContent }),
+      });
+      const data = await response.json();
+      console.log('Uppdaterade data:', data);
+      setShowModal(false);
+      getPosts();
+    } catch (error) {
+      console.error('Fel vid uppdatering av inlägg:', error);
+    }
+  };
+
+  // dalete post
+
+  const handleDelete = (id: number) => {
+    // borttagning
+    
+    console.log(`Ta bort post med ID: ${id}`);
+  };
 
 
   const formatDate = (date: string | number | Date) => {
@@ -101,6 +153,39 @@ export default function Home() {
         
         </div>
       </div>
+
+      {showModal && selectedPost && (
+        <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-gray-900 bg-opacity-50">
+          <div className="bg-white p-8 rounded-lg">
+            <input
+              value={editedTitle}
+              onChange={(e) => setEditedTitle(e.target.value)}
+              className="border border-gray-400 p-2 mb-2 w-full rounded"
+            />
+            <textarea
+              value={editedContent}
+              onChange={(e) => setEditedContent(e.target.value)}
+              className="border border-gray-400 p-2 mb-4 w-full rounded"
+            />
+            <button
+              onClick={() => {
+                updatePost();
+              }}
+              className="bg-teal-900 text-white font-light py-2 px-4 mr-2 rounded"
+            >
+              Spara ändringar
+            </button>
+            <button
+              onClick={() => setShowModal(false)}
+              className="bg-gray-300 text-teal-900 font-light py-2 px-4 rounded"
+            >
+              Stäng
+            </button>
+          </div>
+        </div>
+      )}
+
+
     </div>
   );
 }
