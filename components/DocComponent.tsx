@@ -14,7 +14,7 @@ export default function DocComponent(props: Props) {
         <div className="flex flex-col rounded-lg 
             m-2 p-4 text-gray-200">
             <h3 className="text-xl text-yellow-600">{props.post.title}</h3>
-            <p className="text-gray-200">{props.post.content}</p>
+            <p className="text-gray-300">{props.post.content}</p>
             <p className="text-yellow-600">{formatDate(props.post.createDate)}</p>
         </div>
     );

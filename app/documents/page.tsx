@@ -28,12 +28,12 @@ export default function Documents() {
 
 
   return (
-    <div className="flex flex-col p-10 font-light font-sans">
+    <div className="flex flex-col p-10 font-light font-sans tracking-wide">
      
       <div>
         <h2 className="text-3xl p-5 text-yellow-600 flex 
                     justify-center content-center ">Mina dokument</h2>
-            <div className="overflow-y-auto max-h-screen w-80">
+            <div className="overflow-y-auto max-h-screen w-96">
      
             {posts.map((post) => (
            

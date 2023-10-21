@@ -45,14 +45,14 @@ const Create = () => {
   };
 
   return (
-    <div className="flex flex-col p-10 font-light font-sans">
+    <div className="flex flex-col p-10 font-light font-sans tracking-wide">
       <h2 className="text-3xl p-5 text-yellow-600 flex 
                     justify-center content-center">Skapa dokument</h2>
 
       <form onSubmit={handleSubmit}>
         <div className="pb-6">
           {/* <label className="text-white">Titel:</label><br></br> */}
-          <input className="p-8 bg-gray-300 text-gray-800 rounded-md "
+          <input className="p-8 bg-gray-300 text-gray-800 w-80 rounded-md "
             type="text"
             placeholder="Titel" 
             value={title}
@@ -61,7 +61,7 @@ const Create = () => {
         </div>
         <div className="pb-8">
           {/* <label className="text-white">Innehåll:</label><br></br> */}
-          <textarea className="p-8 bg-gray-300 rounded-md "
+          <textarea className="p-8 bg-gray-300 w-80 rounded-md "
             placeholder="Innehåll"
             value={content}
             onChange={(e) => setContent(e.target.value)}

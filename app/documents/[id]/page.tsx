@@ -124,15 +124,15 @@ const updatePost = async () => {
 
     return (
         <div className="flex flex-col rounded-lg 
-            m-2 p-4 text-gray-200">
+            m-2 p-4 text-gray-200 tracking-wide">
 
             {postData ? (
                 <div className="flex flex-col p-10 font-light font-sans
-                    overflow-y-auto max-h-screen w-80">
+                    overflow-y-auto max-h-screen w-96">
                     <h2>id: {params.id}</h2>
                     <h2 className="text-2xl text-yellow-600 pb-3">{postData[0].title}</h2>
-                    <p className="text-gray-200 pb-3">{postData[0].content}</p>
-                    <p className="text-gray-200">{formatDate(postData[0].createDate)}</p>
+                    <p className="text-gray-300 pb-3">{postData[0].content}</p>
+                    <p className="text-yellow-600 ">{formatDate(postData[0].createDate)}</p>
                 </div>
             ) : (
                 <p>Inga parametrar tillgängliga.</p>
