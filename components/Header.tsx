@@ -7,7 +7,7 @@ export default function Header() {
     justify-around h-24 bg-darkgray text-teal-900">
         <Link href="/">
           <div className="flex flex-wrap justify-center">
-            <h1 className="text-4xl">DAGBOKEN</h1>
+            <h1 className="text-4xl">DOC.create</h1>
           </div>
         </Link>
 
@@ -15,15 +15,16 @@ export default function Header() {
        
         <nav>
             <ul className="list-none flex gap-2">
+
                 <li>
-                    <Link href="/create">Skapa inlägg</Link>
+                <Link href="/documents">Document</Link>
                 </li>
 
                 <li>
-                <Link href="/about">Om mig</Link>
+                    <Link href="/create">Skapa nytt</Link>
                 </li>
                 
-                <li>Annat</li>
+                {/* <li>Annat</li> */}
             </ul>
         </nav>
 
