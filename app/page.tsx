@@ -14,7 +14,7 @@ export default function Home() {
       <div className="py-11">
         <h3 className="text-4xl pt-5 text-yellow-600 font-light flex 
         justify-center content-center ">Välkommen till</h3>
-        <h2 className="text-4xl pt-5 text-yellow-600 font-light flex 
+        <h2 className="text-5xl pt-5 text-yellow-600 font-light flex 
         justify-center content-center ">DOC.create!</h2>
 
         <div className="pt-12 max-h-screen max-w-xl text-gray-400">

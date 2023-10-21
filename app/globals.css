@@ -25,3 +25,15 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+input::placeholder {
+  color: darkolivegreen;
+  font-size: 20px;
+  /* andra önskade stilar */
+}
+
+textarea::placeholder {
+  color: darkolivegreen;
+  font-size: 20px;
+  /* andra önskade stilar */
+}

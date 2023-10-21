@@ -45,21 +45,24 @@ const Create = () => {
   };
 
   return (
-    <div>
-      <h2 className="p-4 text-white">Skapa inlägg:</h2>
+    <div className="flex flex-col p-10 font-light font-sans">
+      <h2 className="text-3xl p-5 text-yellow-600 flex 
+                    justify-center content-center">Skapa dokument</h2>
 
       <form onSubmit={handleSubmit}>
         <div className="pb-6">
-          <label className="text-white">Titel:</label><br></br>
-          <input className="p-8 bg-gray-300"
+          {/* <label className="text-white">Titel:</label><br></br> */}
+          <input className="p-8 bg-gray-300 text-gray-800 rounded-md "
             type="text"
+            placeholder="Titel" 
             value={title}
             onChange={(e) => setTitle(e.target.value)}
           />
         </div>
         <div className="pb-8">
-          <label className="text-white">Innehåll:</label><br></br>
-          <textarea className="p-8 bg-gray-300"
+          {/* <label className="text-white">Innehåll:</label><br></br> */}
+          <textarea className="p-8 bg-gray-300 rounded-md "
+            placeholder="Innehåll"
             value={content}
             onChange={(e) => setContent(e.target.value)}
           />
