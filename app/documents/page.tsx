@@ -7,7 +7,7 @@ import DocComponent from '@/components/DocComponent';
 import { Post } from '@/interface';
 
 
-export default function Home() {
+export default function Documents() {
 
 
   const [posts, setPosts] = useState<Post[]>([]);

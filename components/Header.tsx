@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function Header() {
   return (
-    <header className="sticky top-0 flex items-center 
+    <header className="sticky top-0 flex flex-wrap items-center 
     justify-around h-24 bg-darkgray text-teal-900">
         <Link href="/">
           <div className="flex flex-wrap justify-center">
