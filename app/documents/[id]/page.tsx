@@ -10,7 +10,6 @@ export default function Document( {params} : { params: {id: number, title: strin
     const [postData, setPostData] = useState<Post | null>(null);
     
     const [showModal, setShowModal] = useState(false);
-    //const [selectedPost, setSelectedPost] = useState<Post | null>(null);
     const [editedTitle, setEditedTitle] = useState('');
     const [editedContent, setEditedContent] = useState('');
 
@@ -78,7 +77,6 @@ export default function Document( {params} : { params: {id: number, title: strin
 //   };
 
 const updatePost = async () => {
-    //console.log("selectedPost", selectedPost);
     try {
       const response = await fetch(`http://localhost:3000/posts/${params.id}`, {
         method: 'PUT',
@@ -105,7 +103,7 @@ const updatePost = async () => {
   const handleDelete = (id: number) => {
     // borttagning
     deletePost(id);
-    alert("Dokumentet är raderad")
+    alert("Dokumentet är raderat")
     router.push('/documents')
     console.log(`Ta bort post med ID: ${id}`);
   };
@@ -151,7 +149,7 @@ const updatePost = async () => {
                     onClick={() => handleEdit(params.id)}
                     className="border border-solid shadow bg-teal-900 text-white font-light py-2 px-4 mr-2 rounded-3xl"
                 >
-                Redigera
+                    Redigera
                 </button>
             </div>
 
@@ -176,7 +174,7 @@ const updatePost = async () => {
                             }}
                             className="bg-teal-900 text-white font-light py-2 px-4 mr-2 rounded"
                         >
-                        Spara ändringar
+                            Spara ändringar
                         </button>
                         <button
                             onClick={() => setShowModal(false)}

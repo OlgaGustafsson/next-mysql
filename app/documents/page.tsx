@@ -1,13 +1,3 @@
-// export default function Struktur() {
-//     return(
-//         <div>
-//             <h2>Dokument</h2>
-//         </div>
-//     );
-// }
-
-
-
 'use client'
 
 import { useEffect, useState } from 'react';
@@ -35,11 +25,6 @@ export default function Home() {
   useEffect(() => {
     getPosts();
   }, []);
-
-//   const formatDate = (date: string | number | Date) => {
-//     const options = { year: 'numeric', month: '2-digit', day: '2-digit' };
-//     return new Date(date).toLocaleDateString('sv-SE');
-//   };
 
 
   return (

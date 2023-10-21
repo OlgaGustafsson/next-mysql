@@ -17,14 +17,17 @@ export default function Header() {
             <ul className="list-none flex gap-2">
 
                 <li>
-                <Link href="/documents">Document</Link>
+                  <Link href="/">Hem</Link>
+                </li> 
+
+                <li>
+                <Link href="/documents">Dokument</Link>
                 </li>
 
                 <li>
                     <Link href="/create">Skapa nytt</Link>
                 </li>
-                
-                {/* <li>Annat</li> */}
+              
             </ul>
         </nav>
 
