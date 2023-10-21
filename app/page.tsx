@@ -3,14 +3,15 @@
 import { useEffect, useState } from 'react';
 import Link from '@/node_modules/next/link';
 import { useRouter } from '@/node_modules/next/navigation';
+import { Post } from '@/interface';
 
 
-interface Post {
-  id: number
-  title: string
-  content: string
-  createDate: Date
-}
+// interface Post {
+//   id: number
+//   title: string
+//   content: string
+//   createDate: Date
+// }
 
 // const handlePostClick = (id: number ) => {
 //   // eslint-disable-next-line react-hooks/rules-of-hooks
