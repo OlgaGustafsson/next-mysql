@@ -110,7 +110,7 @@ const updatePost = async () => {
 
   const deletePost = async (id: any) => {
     try {
-      const response = await fetch(`http://localhost:3000/posts/${id}`, {
+      const response = await fetch(`/api/documents/${id}`, {
         method: 'DELETE',
       });
       const data = await response.json();

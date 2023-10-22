@@ -12,9 +12,9 @@ export async function GET(req: Request, {params}: {params: {id: string}}) {
         
     });
     return NextResponse.json(result, {status: 200})
-
-
 }
+
+
 export async function PATCH(req: Request, {params}: {params: {id: string}}) {
 
     const {id} = params;
@@ -25,6 +25,22 @@ export async function PATCH(req: Request, {params}: {params: {id: string}}) {
     const result = await query({
         query: "UPDATE posts SET title = ?, content = ? WHERE id = " + parseInt(id),
         values: [title, content]
+    });
+    return NextResponse.json(result, {status: 200})
+}
+
+
+export async function DELETE(req: Request, {params}: {params: {id: string}}) {
+    const {id} = params;
+    console.log("id", id);
+    
+    const result = await query ({
+        query: "DELETE FROM posts WHERE id = " + parseInt(id) 
+
+        // SOFT DELETE
+        // const result = await query ({
+        //     query: "UPDATE posts SET deleted=1 WHERE id = " + parseInt(id) 
+        
     });
     return NextResponse.json(result, {status: 200})
 }
