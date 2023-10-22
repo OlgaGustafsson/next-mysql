@@ -1,5 +1,6 @@
 import Link from '@/node_modules/next/link'
 import React from 'react'
+import Navbar from './Navbar'
 
 export default function Header() {
   return (
@@ -12,8 +13,9 @@ export default function Header() {
         </Link>
 
         <div className="flex flex-wrap justify-center">
+          <Navbar />
        
-        <nav>
+        {/* <nav>
             <ul className="list-none flex gap-2">
 
                 <li>
@@ -29,7 +31,7 @@ export default function Header() {
                 </li>
               
             </ul>
-        </nav>
+        </nav> */}
 
         </div>
     </header>

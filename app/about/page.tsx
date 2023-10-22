@@ -1,7 +1,7 @@
 export default function Struktur() {
     return(
         <div>
-            <h2>Om mig</h2>
+            <h2>Om oss</h2>
         </div>
     );
 }

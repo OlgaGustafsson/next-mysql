@@ -26,9 +26,6 @@ export default function Home() {
           som förenklar och effektiviserar dokumenthanteringsprocessen. 
           Skapa, redigera och hantera dokument enkelt och smidigt. &quot;
           </h3>
-          {/* <h3 className="text-xl text-center tracking-wide">
-          Skapa, redigera och hantera dokument enkelt och smidigt.
-          </h3> */}
         
         </div>
       </div>
