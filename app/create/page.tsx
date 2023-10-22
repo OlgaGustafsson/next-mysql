@@ -1,12 +1,3 @@
-// export default function Create() {
-//     return(
-//         <div>
-//             <h2>Skapa</h2>
-//         </div>
-//     );
-// }
-
-
 'use client'
 
 import { useState } from "react";
@@ -24,7 +15,7 @@ const Create = () => {
       }
 
     try {
-      const response = await fetch("http://localhost:3000/posts", {
+      const response = await fetch("http:/api/documents", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

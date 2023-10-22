@@ -14,7 +14,7 @@ export default function Documents() {
 
   const getPosts = async () => {
     try {
-      const response = await fetch("http://localhost:3000/api/documents");
+      const response = await fetch("/api/documents");
       const data = await response.json();
       setPosts(data);
     } catch (error) {
