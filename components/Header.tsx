@@ -13,6 +13,7 @@ export default function Header() {
         </Link>
 
         <div className="flex flex-wrap justify-center">
+          
           <Navbar />
        
         {/* <nav>
