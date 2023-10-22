@@ -15,7 +15,7 @@ export default function Document( {params} : { params: {id: number, title: strin
 
 
     useEffect(() => {
-        const fetchPostData = async () => {
+        const getPostById = async () => {
             try {
                 const response = await fetch(`/api/documents/${params.id}`);
                 const data = await response.json();
@@ -31,7 +31,7 @@ export default function Document( {params} : { params: {id: number, title: strin
             }
         };
 
-        fetchPostData();
+        getPostById();
     }, [params.id]);
     
 
@@ -78,8 +78,8 @@ export default function Document( {params} : { params: {id: number, title: strin
 
 const updatePost = async () => {
     try {
-      const response = await fetch(`http://localhost:3000/posts/${params.id}`, {
-        method: 'PUT',
+      const response = await fetch(`/api/documents/${params.id}`, {
+        method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
         },
@@ -90,7 +90,7 @@ const updatePost = async () => {
       setShowModal(false);
   
       // hämta den uppdaterade datan och uppdatera state
-      const updatedResponse = await fetch(`http://localhost:3000/posts/${params.id}`);
+      const updatedResponse = await fetch(`/api/documents/${params.id}`);
       const updatedData = await updatedResponse.json();
       setPostData(updatedData);
     } catch (error) {
@@ -135,7 +135,7 @@ const updatePost = async () => {
                     <p className="text-yellow-600 ">{formatDate(postData[0].createDate)}</p>
                 </div>
             ) : (
-                <p>Inga parametrar tillgängliga.</p>
+                <p>Laddar...</p>
             )}
             
             <div className="flex justify-center mt-4">
