@@ -17,7 +17,7 @@ export default function Document( {params} : { params: {id: number, title: strin
     useEffect(() => {
         const fetchPostData = async () => {
             try {
-                const response = await fetch(`http://localhost:3000/posts/${params.id}`);
+                const response = await fetch(`/api/documents/${params.id}`);
                 const data = await response.json();
                 console.log("API Response Data:", data);
 
