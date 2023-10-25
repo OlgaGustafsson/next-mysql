@@ -1,3 +1,54 @@
+# Dokumenthanteringssystem med Next och MySQL
+
+Dokumenthanteringssystem är en Next-applikation med API-routes,
+ett system för att skapa digitala dokument som sparas i en MySQL-databas. 
+
+Man kan se en översiktslista med alla skapade dokument, skapa nya, redigera och ta bort de som redan finns där. Det finns möjlighet att se dokumentet både “live”, dvs utan redigeringsläget, samt i redigeringsläge.
+
+
+
+## Vill du köra min app lokalt?
+
+1. Klona repo
+
+```
+
+git clone git@github.com:OlgaGustafsson/next-mysql.git
+
+```
+
+2. Gå in i repokatalogen
+
+```
+
+cd next-mysql
+
+```
+
+3. Installera dev dependencies
+
+```
+
+npm install
+
+```
+
+4. Starta servern 
+
+```
+
+npm run dev
+
+```
+
+5. Öppna http://localhost:3000/ i din webbläsare.
+
+
+
+
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started

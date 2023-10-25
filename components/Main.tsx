@@ -11,7 +11,7 @@ export default function Main({
         >
           <div 
           className="w-full max-w-screen-lg 
-          bg-teal-900  flex justify-center"
+          bg-teal-900 flex justify-center"
           >
             {children}
           </div>
