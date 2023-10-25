@@ -8,7 +8,7 @@ Dokumenthanteringssystem är ett system för att skapa digitala dokument som spa
 
 ## För att köra min app lokalt
 
-####(krävs MAMP, databaskopia som importeras med hjällp av phpMyAdmin och databaskonfiguration)
+#### (krävs MAMP, databaskopia som importeras med hjällp av phpMyAdmin och databaskonfiguration)
 
 1. Klona repo
 
