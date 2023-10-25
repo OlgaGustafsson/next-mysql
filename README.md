@@ -1,13 +1,14 @@
-# Dokumenthanteringssystem med Next och MySQL
+# Dokumenthanteringssystem 
 
-Dokumenthanteringssystem är en Next-applikation med API-routes,
-ett system för att skapa digitala dokument som sparas i en MySQL-databas. 
+En SPA-applikation som är byggd med Next, MySQL och Tailwind CSS.
 
-Man kan se en översiktslista med alla skapade dokument, skapa nya, redigera och ta bort de som redan finns där. Det finns möjlighet att se dokumentet både “live”, dvs utan redigeringsläget, samt i redigeringsläge.
-
+Dokumenthanteringssystem är ett system för att skapa digitala dokument som sparas i en MySQL-databas. Man kan se en översiktslista med alla skapade dokument, se varje dokument som en "singlepage" och man kan ta bort eller redigera dokument. Det finns möjlighet att se dokumentet både “live” och i redigeringsläge.
 
 
-## Vill du köra min app lokalt?
+
+## För att köra min app lokalt
+
+(krävs MAMP, databaskopia som importeras med hjällp av phpMyAdmin och databaskonfiguration)
 
 1. Klona repo
 
@@ -44,10 +45,6 @@ npm run dev
 5. Öppna http://localhost:3000/ i din webbläsare.
 
 
-#
-#
-#
-#
 #
 
 
