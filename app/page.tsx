@@ -1,11 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 'use client'
 
-// import { useEffect, useState } from 'react';
-// import Link from '@/node_modules/next/link';
-// import { useRouter } from '@/node_modules/next/navigation';
-// import { Post } from '@/interface';
-
 
 export default function Home() {
 

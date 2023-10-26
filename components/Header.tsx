@@ -15,24 +15,6 @@ export default function Header() {
         <div className="flex flex-wrap justify-center">
           
           <Navbar />
-       
-        {/* <nav>
-            <ul className="list-none flex gap-2">
-
-                <li>
-                  <Link href="/">Hem</Link>
-                </li> 
-
-                <li>
-                <Link href="/documents">Dokument</Link>
-                </li>
-
-                <li>
-                    <Link href="/create">Skapa nytt</Link>
-                </li>
-              
-            </ul>
-        </nav> */}
 
         </div>
     </header>

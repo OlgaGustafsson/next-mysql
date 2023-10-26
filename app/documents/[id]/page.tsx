@@ -45,7 +45,7 @@ export default function Document( {params} : { params: {id: number, title: strin
 
         
       // UPDATE post
-      
+
 
   const handleEdit = (id: number) => {
 
@@ -54,28 +54,9 @@ export default function Document( {params} : { params: {id: number, title: strin
         if (Array.isArray(postData) && postData.length > 0) {
         setEditedTitle(postData[0].title);
         setEditedContent(postData[0].content);
-        } 
-    
+        }    
   };
 
-//   const updatePost = async () => {
-//    //console.log("selectedPost", selectedPost);
-//     try {
-//       const response = await fetch(`http://localhost:3000/posts/${params.id}`, {
-//         method: 'PUT',
-//         headers: {
-//           'Content-Type': 'application/json',
-//         },
-//         body: JSON.stringify({ title: editedTitle, content: editedContent }),
-//       });
-//       const data = await response.json();
-//       console.log('Uppdaterade data:', data);
-//       setShowModal(false);
-//       setPostData({ ...postData, title: editedTitle, content: editedContent });
-//     } catch (error) {
-//       console.error('Fel vid uppdatering av inlägg:', error);
-//     }
-//   };
 
 const updatePost = async () => {
     try {
