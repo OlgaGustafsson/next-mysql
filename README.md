@@ -1,6 +1,6 @@
 # Dokumenthanteringssystem 
 
-En SPA-applikation som är byggd med Next, MySQL och Tailwind CSS.
+En enkelsidesapplikation (SPA) som är byggd med Next, MySQL och Tailwind CSS.
 
 Dokumenthanteringssystem är ett system för att skapa digitala dokument som sparas i en MySQL-databas. Man kan se en översiktslista med alla skapade dokument, se varje dokument som en "singlepage" och ta bort eller redigera dokument. Det finns möjlighet att se dokumentet både “live” och i redigeringsläge.
 
